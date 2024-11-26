@@ -1,0 +1,43 @@
+/* Outer circle for the 8-ball */
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #000000; /* Black for the 8-ball */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+/* Inner white circle */
+.circle::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Number "8" in the center */
+.circle::after {
+    content: '8';
+    position: absolute;
+    font-size: 3rem;
+    font-weight: bold;
+    color: black;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: url('download.jpg') no-repeat center center fixed;
+    background-size: cover; /* Make sure the image covers the entire background */
+    font-family: Arial, sans-serif;
+    color: white;
+}
