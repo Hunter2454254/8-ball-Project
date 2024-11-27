@@ -36,8 +36,28 @@
 body {
     margin: 0;
     padding: 0;
-    background: url('download.jpg') no-repeat center center fixed;
-    background-size: cover; /* Make sure the image covers the entire background */
+    background: url('../img/1340734.png') no-repeat center center fixed;
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-attachment: fixed; /* Keeps the image fixed when scrolling */
     font-family: Arial, sans-serif;
     color: white;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Add a dark overlay */
+    z-index: -1; /* Place the overlay behind the content */
+}
+
+button {
+    border-radius: 50px;
+    padding: 12px 30px; 
+    font-size: 1rem; 
+    background-color: #000000; 
+    color: white; 
+    border: none; 
 }
